@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fstyle.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <title>Facciata reinventos</title>
     <style>
@@ -33,9 +34,10 @@
             </ul>
         </nav> 
     </div>
-   
-  
     <div id="container" class="container">
+        <span id="tab">
+            <i class="fas fa-bars"></i>
+        </span>
         <aside>
             <nav>
                 <h2>Herramientas</h2>
@@ -55,7 +57,7 @@
                 <h3>Sliders pantalla</h3>
             </div>
             <section >
-            <div class="row">
+            <div class="row ">
                 <!-- Contenido 1 va aquí -->
                 <div class="col col-3">
                     <article class="article card">
@@ -64,21 +66,28 @@
                     </article>
                 </div>
                 <div class="col col-3">
-                    <article class="article ">
+                    <article class="article card">
                         <img src="https://via.placeholder.com/150" alt="Placeholder Image">
-                        <button>Click me</button>
+                        <button class="action_buttons">Click me</button>
                     </article>
                 </div>
                 <div class="col col-3">
-                    <article class="article ">
+                    <article class="article card">
                         <img src="https://via.placeholder.com/150" alt="Placeholder Image">
-                        <button class="">Click me</button>
+                        <button class="action_buttons">Click me</button>
                     </article>
                 </div>
                 <div class="col col-3">
-                    <article class="article ">
+                    <article class="article card">
                         <img src="https://via.placeholder.com/150" alt="Placeholder Image">
-                        <button class="">Click me</button>
+                        <button class="action_buttons">Click me</button>
+                    </article>
+                </div>
+
+                <div class="col col-3">
+                    <article class="article card">
+                        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+                        <button class="action_buttons">Click me</button>
                     </article>
                 </div>
             </div>
@@ -91,6 +100,16 @@
         document.querySelector('#tab').addEventListener('click', function() {
         document.querySelector('aside').classList.toggle('hidden');
     });
+    </script>
+
+    <script>
+        window.onload = function() {
+        var aside = document.querySelector('#container aside');
+        var container = document.querySelector('#container');
+
+        var asideHeight = aside.offsetHeight;
+        container.style.maxHeight = asideHeight + 'px';
+    }
     </script>
 </body>
 </html>
