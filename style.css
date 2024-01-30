@@ -1,0 +1,162 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #dcdcdc;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#logo {
+    height: 80px;
+}
+#logo1 {
+  height: 80px;
+}
+.hidden {
+  display: none;
+}
+#tab {
+  color: #97a3af;
+}
+
+/*header nav {
+  position: static;
+  align-self: flex-end;
+}*/
+header nav {
+   position: absolute;
+   right: 120px; 
+}
+header nav ul {
+  list-style-type: none;
+}
+header nav ul li {
+  margin-right: 10px; /* Ajusta este valor según el margen deseado */
+  display: inline;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #97a3af;
+}
+.nav-header-acc {
+   
+}
+.bheader h2 {
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.bheader {
+    width: 80%;
+    display: flex;
+    wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #dcdcdc;
+    border-bottom: .5px solid #d1d4d7;
+}
+#logo {
+  height: 80px;
+}
+aside {
+  background-color: #dcdcdc;
+  width: 200px;
+  height: 100vh;
+  padding: 20px;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+nav ul li {
+  margin-bottom: 10px;
+}
+nav ul li a {
+  color: #5c5cab;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #ff9100;
+}
+.tmain {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+
+#container {
+  display: flex;
+  flex-direction: row;
+  padding-left: 119px;
+  padding-right: 119px;
+ /* border-top: 0.5px solid #d1d4d7;*/
+}
+
+#container aside nav h2 {
+  color: #586c80;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+}
+
+#main-content {
+  flex-grow: 1;
+  width: 90%;
+  border-left: 0.5px solid #d1d4d7;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+#main-content section article {
+  padding: 20px;
+}
+#tmain {
+  padding: 2px;
+  color: #586c80;
+  background-color: #d2d9df;
+  border-bottom: 5px solid #cdd3da;
+  padding-left: 15px;
+  margin-left: 20px;
+}
+
+.action_buttons {
+    background-color:#a1adba;
+    color: white;
+    padding: 7px;
+}
+
+
+/* Estilos para pantallas de tamaño grande */
+@media (min-width: 1200px) {
+  #container {
+    display: flex;
+  }
+
+  #main-content {
+    flex-grow: 1;
+  }
+}
+
+/* Estilos para pantallas de tamaño mediano */
+@media (min-width: 768px) and (max-width: 1199px) {
+  #container {
+    display: flex;
+  }
+
+  #main-content {
+    flex-grow: 1;
+  }
+}
+
+/* Estilos para pantallas de tamaño pequeño */
+@media (max-width: 767px) {
+  #container {
+    display: block;
+  }
+
+  #main-content {
+    width: 100%;
+  }
+}
