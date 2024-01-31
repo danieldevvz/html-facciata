@@ -1,0 +1,13 @@
+acabo de actualizar el index.html 
+se deben actualizar las imagenes de logo (logo web,quienes somos,contacto): 
+		aca cuando estemos trabajando en angular (si se va a seleccionar angular, se hace al momento por que es con el 			comonente, es decir se va a hacer a traves del componente de imagenes y seleccion de imagenes para cambiar la imagen. por ahora lo voy a dejar con las imagenees de prueba de producto hasta que cambie he inserte el script, esta tarde lo haré) 
+
+index.html : con el responsive, y  el detalle del plugin, estaria listo el html para el frontend de la adminitración, la sección quienes somos esta en abouot_us.html hice el html por separado.
+
+add_products.html 
+	
+carousel.html: carousel y sliders tienen lo mismo. ¿van ubicados en diferente parte? 
+
+sliders.html: 
+
+offers.html en offers voy esta tarde a colocar lo que falta. esta el html sin ninguna función voy a darle la función cuando el usuario hace click en por stock, no debe mostrar los inputs de las fechas por que es por stocks y aparece el input stock por cantidad, por fechas aparece un input tipo fecha que guarda hasta la fecha especifica. y por rango de fecha abarca un rango de fecha.

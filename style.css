@@ -19,6 +19,36 @@ header {
 #tab {
   color: #97a3af;
 }
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table th {
+  color: #334f69;
+  font-size: 13px;
+}
+table  td {
+  color: #6c6c83;
+  font-size: 13px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+table  a{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+}
+table  a:hover {
+  color: #ff9100;
+}
+#tcontent {
+  color:#5a6f8b;
+}
+
 
 /*header nav {
   position: static;
@@ -157,6 +187,17 @@ y lo hace centrar en la pantalla
   color: white;
   padding: 7px;
 }
+#new_client {
+  position: absolute;
+  bottom: 0px;
+}
+
+#print_client {
+  position: absolute;
+  font-size: 40px;
+  color: #a1adba;
+  bottom: 50px;
+}
 
 /* Estilos para pantallas de tamaño grande */
 @media (min-width: 1200px) {
@@ -209,6 +250,19 @@ y lo hace centrar en la pantalla
   border: 1px solid #888;
   width: 50%; /* Ajusta el ancho del modal */
   height: 50%; /* Ajusta la altura del modal */
+  position: fixed; /* Hace que el modal se mantenga en una posición específica */
+  top: 50%; /* Posiciona el modal en el centro verticalmente */
+  left: 50%; /* Posiciona el modal en el centro horizontalmente */
+  transform: translate(-50%, -50%); /* Asegura que el modal esté centrado */
+}
+
+.modal-client {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%; /* Ajusta el ancho del modal */
+  height: 90%; /* Ajusta la altura del modal */
   position: fixed; /* Hace que el modal se mantenga en una posición específica */
   top: 50%; /* Posiciona el modal en el centro verticalmente */
   left: 50%; /* Posiciona el modal en el centro horizontalmente */

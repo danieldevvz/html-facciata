@@ -43,64 +43,100 @@
                 <h2>Herramientas</h2>
                 <ul>
                     <li><a href="index.html">InfoWeb</a></li>
-                    <li><a href="#">Pantalla</a></li>
+                    <li><a href="sliders.html">Pantalla</a></li>
                     <li><a href="add_product.html">Productos</a></li>
                     <li><a href="sliders.html">Carrucel</a></li>
                     <li><a href="#">Muestras</a></li>
                     <li><a href="offers.html">Ofertas</a></li>
+                    <li><a href="clientes.html">Clientes</a></li>
                     <!-- Agrega más elementos de lista según sea necesario -->
                 </ul>
             </nav>
         </aside>
         <div id="main-content">
             <div id="tmain">
-                <h3>Sliders pantalla</h3>
+                <h3>Inicio</h3>
             </div>
             <section >
             <div class="row ">
                 <!-- Contenido 1 va aquí -->
-                <div class="col col-3">
-                    <article class="article card">
-                        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
-                        <button class="action_buttons" id="myBtn">Click me</button>
-                    </article>
+                <div class="col col-12">
+                    <h3 id="tcontent">Lista de pedidos</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID Cliente</th>
+                                <th>Nombre</th>
+                                <th>Apellidos</th>
+                                <th>Email</th>
+                                <th>Teléfono</th>
+                                <th>Celular</th>
+                                <th>Pedidos</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john.doe@example.com</td>
+                                <td>1234567890</td>
+                                <td>0987654321</td>
+                                <td>5</td>
+                                <td><a href="#" id="myBtn">Ver pedido</a></td>
+                            </tr>
+                            <!-- Aquí irán las filas de la tabla con los datos de los clientes -->
+                        </tbody>
+                    </table>
                 </div>
-                <div class="col col-3">
-                    <article class="article card">
-                        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
-                        <button class="action_buttons">Click me</button>
-                    </article>
-                </div>
-                <div class="col col-3">
-                    <article class="article card">
-                        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
-                        <button class="action_buttons">Click me</button>
-                    </article>
-                </div>
-                <div class="col col-3">
-                    <article class="article card">
-                        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
-                        <button class="action_buttons">Click me</button>
-                    </article>
-                </div>
-
-                <div class="col col-3">
-                    <article class="article card">
-                        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
-                        <button class="action_buttons">Click me</button>
-                    </article>
-                </div>
+                <span id="print_client" onclick="printOrder()">
+                    <i class="fas fa-print"></i>
+                </span>
             </div>
+            <button class="action_buttons" id="new_client">Nuevo</button>
         </div>
 
         <!-- Resto del contenido de container va aquí -->
+      
     </div>
     <div id="myModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-client">
             <span class="close">&times;</span>
             <p>Contenido del modal</p>
+            <span id="print_client" onclick="printOrder()">
+                <i class="fas fa-print"></i>
+            </span>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Cliente</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                        <th>Celular</th>
+                        <th>Pedidos</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>john.doe@example.com</td>
+                        <td>1234567890</td>
+                        <td>0987654321</td>
+                        <td>5</td>
+                        <td><a href="#" id="myBtn">Ver pedido</a></td>
+                    </tr>
+                    <!-- Aquí irán las filas de la tabla con los datos de los clientes -->
+                </tbody>
+            </table>
         </div>
     </div>
+   
     <footer>
         <!-- Contenido del footer -->
         &copy; 2027 Facciata reinventos
@@ -142,6 +178,14 @@
         btn.onclick = function() {
             modal.style.display = "block";
         }
+    </script>
+
+    <script>
+        function printOrder() {
+            window.print();
+        }
+
+        document.getElementById('printButton').addEventListener('click', printOrder);
     </script>
 </body>
 </html>
