@@ -142,6 +142,14 @@ y lo hace centrar en la pantalla
   font-size: 19px;
 }
 
+.modal-client h2 {
+  color: #586c80;
+}
+
+.modal-client label {
+  color: #5a6f8b;
+  color: #5a6f8b;
+}
 #main-content {
   flex-grow: 1;
   width: 90%;
@@ -234,41 +242,48 @@ y lo hace centrar en la pantalla
 }
 .modal {
   display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal-content {
-  background-color: #fefefe;
+.modal-sm {
   margin: auto;
   padding: 20px;
+  background-color: #fefefe;
   border: 1px solid #888;
-  width: 50%; /* Ajusta el ancho del modal */
-  height: 50%; /* Ajusta la altura del modal */
+  width: 25%; /* Ajusta el ancho del modal */
+  height: 25%; /* Ajusta la altura del modal */
   position: fixed; /* Hace que el modal se mantenga en una posición específica */
   top: 50%; /* Posiciona el modal en el centro verticalmente */
   left: 50%; /* Posiciona el modal en el centro horizontalmente */
   transform: translate(-50%, -50%); /* Asegura que el modal esté centrado */
 }
 
-.modal-client {
-  background-color: #fefefe;
+.modal-md {
   margin: auto;
   padding: 20px;
+  background-color: #fefefe;
   border: 1px solid #888;
-  width: 90%; /* Ajusta el ancho del modal */
-  height: 90%; /* Ajusta la altura del modal */
+  width: 70%; /* Ajusta el ancho del modal */
+  height: 70%; /* Ajusta la altura del modal */
   position: fixed; /* Hace que el modal se mantenga en una posición específica */
   top: 50%; /* Posiciona el modal en el centro verticalmente */
   left: 50%; /* Posiciona el modal en el centro horizontalmente */
   transform: translate(-50%, -50%); /* Asegura que el modal esté centrado */
 }
+
+.modal-lg {
+  margin: auto;
+  padding: 20px;
+  background-color: #fefefe;
+  border: 1px solid #888;
+  width: 100%; /* Ajusta el ancho del modal */
+  height: 100%; /* Ajusta la altura del modal */
+  position: fixed; /* Hace que el modal se mantenga en una posición específica */
+  top: 50%; /* Posiciona el modal en el centro verticalmente */
+  left: 50%; /* Posiciona el modal en el centro horizontalmente */
+  transform: translate(-50%, -50%); /* Asegura que el modal esté centrado */
+}
+
 .close {
   color: #aaa;
   float: right;

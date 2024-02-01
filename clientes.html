@@ -100,7 +100,7 @@
         <!-- Resto del contenido de container va aquí -->
       
     </div>
-    <div id="myModal" class="modal">
+    <div id="myModal" class="modal modal-md">
         <div class="modal-client">
             <span class="close">&times;</span>
             <p>Contenido del modal</p>
@@ -136,7 +136,36 @@
             </table>
         </div>
     </div>
-   
+
+    <div id="myClientInsertModal" class="modal modal-md">
+        <div class="modal-client">
+            <span class="close">&times;</span>
+            <h2>Pedido Cliente</h2>
+            <form>
+                <label for="productName">Nombre del producto:</label><br>
+                <input type="text" id="productName" name="productName"><br>
+                <label for="productQuantity">Cantidad del producto:</label><br>
+                <input type="number" id="productQuantity" name="productQuantity"><br>
+                <label for="deliveryLocation">Lugar de la entrega:</label><br>
+                <input type="text" id="deliveryLocation" name="deliveryLocation"><br>
+                <label for="deliveryDate">Fecha de entrega:</label><br>
+                <input type="date" id="deliveryDate" name="deliveryDate"><br>
+                <label for="firstName">Nombre:</label><br>
+                <input type="text" id="firstName" name="firstName"><br>
+                <label for="lastName">Apellido:</label><br>
+                <input type="text" id="lastName" name="lastName"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="cellPhone">Celular:</label><br>
+                <input type="tel" id="cellPhone" name="cellPhone"><br>
+                <label for="phone">Telefono:</label><br>
+                <input type="tel" id="phone" name="phone"><br>
+                <input type="submit" value="Registrar Pedido">
+                <input type="reset" value="Cancelar">
+            </form>
+            
+        </div>
+    </div>
     <footer>
         <!-- Contenido del footer -->
         &copy; 2027 Facciata reinventos
@@ -161,22 +190,42 @@
 
     <script>
         var modal = document.getElementById("myModal");
+
+        // Obtén el elemento que cierra el modal
         var span = document.getElementsByClassName("close")[0];
 
+        // Cuando el usuario hace clic en el elemento (x), cierra el modal
         span.onclick = function() {
             modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
         }
 
         var btn = document.getElementById("myBtn");
 
         btn.onclick = function() {
             modal.style.display = "block";
+        }
+    </script>
+
+
+
+    <script>
+        var modalInsert = document.getElementById("myClientInsertModal");
+        var spanCloseModalClientInsert = document.getElementsByClassName("close")[0];
+
+        spanCloseModalClientInsert.onclick = function() {
+            modalInsert.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modalInsert) {
+                modalInsert.style.display = "none";
+            }
+        }
+
+        var btnClient = document.getElementById("new_client");
+
+        btnClient.onclick = function() {
+            modalInsert.style.display = "block";
         }
     </script>
 
