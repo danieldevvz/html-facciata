@@ -142,13 +142,27 @@ y lo hace centrar en la pantalla
   font-size: 19px;
 }
 
+.modal-client {
+  display: flex;
+  flex-direction: column;
+  color: #6e85a0;
+ 
+} 
+.modal-client input {
+  width: 100%;
+  margin-bottom: 10px;
+}
 .modal-client h2 {
   color: #586c80;
+  font-family: arial;
+}
+ label {
+  color: #5a6f8b;
+  color: #5a6f8b;
 }
 
-.modal-client label {
-  color: #5a6f8b;
-  color: #5a6f8b;
+#myClientInsertModal {
+background-color: #cccccc;
 }
 #main-content {
   flex-grow: 1;
@@ -207,6 +221,10 @@ y lo hace centrar en la pantalla
   color: #a1adba;
   bottom: 50px;
 }
+
+
+
+
 
 /* Estilos para pantallas de tamaño grande */
 @media (min-width: 1200px) {
