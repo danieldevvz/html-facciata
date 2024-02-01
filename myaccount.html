@@ -55,28 +55,53 @@
         </aside>
         <div id="main-content">
             <div id="tmain">
-                <h3>Inicio</h3>
+                <h3>My account</h3>
             </div>
             <section >
             <div class="row ">
                 <!-- Contenido 1 va aquí -->
-                <div class="col col-3">
+                <div class="col col-6">
                     <article class="article card">
-                        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
-                        <button class="action_buttons" id="myBtn">Click me</button>
+                       
+                        <div class="col-6">    
+                            <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+                        </div>
+                            <div id="accountDetails">
+                                
+                                <div>
+                                    <label for="fname">First Name:</label>
+                                    <span id="fname">John</span>
+                                    <a href="#" id="editFnameLink">Edit</a>
+                                </div>
+                                <div>
+                                    <label for="lname">Last Name:</label>
+                                    <span id="lname">Doe</span>
+                                    <a href="#" id="editLnameLink">Edit</a>
+                                </div>
+                                <div>
+                                    <label for="email">Email:</label>
+                                    <span id="email">john.doe@example.com</span>
+                                    <a href="#" id="editEmailLink">Edit</a>
+                                </div>
+                                <div>
+                                    <label for="password">Password:</label>
+                                    <span id="password">******</span>
+                                    <a href="#" id="editPasswordLink">Edit</a>
+                                </div>
+                               
+                            </div>
+                           
+                   
                     </article>
                 </div>
+
+              
             </div>
         </div>
-
+        
         <!-- Resto del contenido de container va aquí -->
     </div>
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Contenido del modal</p>
-        </div>
-    </div>
+   
     <footer>
         <!-- Contenido del footer -->
         &copy; 2027 Facciata reinventos
@@ -89,35 +114,12 @@
     </script>
 
     <script>
-        window.onload = function() {
-        var aside = document.querySelector('#container aside');
-        var container = document.querySelector('#container');
-
-        var asideHeight = aside.offsetHeight;
-        container.style.maxHeight = asideHeight + 'px';
-    }
+    
     </script>
 
 
     <script>
-        var modal = document.getElementById("myModal");
-        var span = document.getElementsByClassName("close")[0];
-
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-        var btn = document.getElementById("myBtn");
-
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
+        
     </script>
 </body>
 </html>
