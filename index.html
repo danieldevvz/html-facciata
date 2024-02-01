@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fstyle.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://unpkg.com/ng-file-upload@12.2.13/dist/ng-file-upload.min.js"></script>
+    <script src="app.js"></script>
+
     <title>Facciata reinventos</title>
     <style>
         /* Añade aquí tus estilos CSS */
       
     </style>
 </head>
-<body>
+<body ng-app="myApp" ng-controller="MyCtrl as vm">
     <header>
         <img src="logo.png" alt="Logo 1" id="logo">
         <!-- <nav class="nav-header-acc">
@@ -45,7 +49,7 @@
                     <li><a href="index.html">InfoWeb</a></li>
                     <li><a href="sliders.html">Pantalla</a></li>
                     <li><a href="add_product.html">Productos</a></li>
-                    <li><a href="sliders.html">Carrucel</a></li>
+                    <li><a href="carousel.html">Carrucel</a></li>
                     <li><a href="#">Muestras</a></li>
                     <li><a href="offers.html">Ofertas</a></li>
                     <li><a href="clientes.html">Clientes</a></li>
@@ -66,35 +70,21 @@
                         <button class="action_buttons" id="myBtn">Click me</button>
                     </article>
                 </div>
-                <div class="col col-3">
-                    <article class="article card">
-                        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
-                        <button class="action_buttons">Click me</button>
-                    </article>
-                </div>
-                <div class="col col-3">
-                    <article class="article card">
-                        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
-                        <button class="action_buttons">Click me</button>
-                    </article>
-                </div>
-                <div class="col col-3">
-                    <article class="article card">
-                        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
-                        <button class="action_buttons">Click me</button>
-                    </article>
-                </div>
-
-                <div class="col col-3">
-                    <article class="article card">
-                        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
-                        <button class="action_buttons">Click me</button>
-                    </article>
-                </div>
-            </div>
+                <body ng-app="myApp" ng-controller="MyCtrl as vm">
+                  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://unpkg.com/ng-file-upload@12.2.13/dist/ng-file-upload.min.js"></script>
+    <script src="app.js"></script>
+                  </body>
         </div>
 
         <!-- Resto del contenido de container va aquí -->
+
+        <div>
+            <label>Name:</label>
+            <input type="text" ng-model="yourName" placeholder="Enter a name here">
+            <hr>
+            <h1>Hello {{yourName}}!</h1>
+          </div>
     </div>
     <div id="myModal" class="modal">
         <div class="modal-content">

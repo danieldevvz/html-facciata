@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fstyle.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.css" rel="stylesheet">
+    <title>Facciata reinventos</title>
+    <style>
+        /* Añade aquí tus estilos CSS */
+      
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo 1" id="logo">
+        <!-- <nav class="nav-header-acc">
+            <ul>
+                <li><a href="#">Mi cuenta</a></li>
+                <li><a href="#">Salir</a></li>
+            </ul>
+        </nav> -->
+    </header>
+
+    <div class="bheader">
+        <h2>Administración Web</h2>
+        
+        <nav class="nav-header-acc">
+            <ul>
+                <li><a href="#">Mi cuenta</a></li>
+                <li><a href="#">Salir</a></li>
+            </ul>
+        </nav> 
+    </div>
+    <div id="container" class="container">
+        <span id="tab">
+            <i class="fas fa-bars"></i>
+        </span>
+        <aside>
+            <nav>
+                <h2>Herramientas</h2>
+                <ul>
+                    <li><a href="index.html">InfoWeb</a></li>
+                    <li><a href="#">Pantalla</a></li>
+                    <li><a href="add_product.html">Productos</a></li>
+                    <li><a href="sliders.html">Carrucel</a></li>
+                    <li><a href="#">Muestras</a></li>
+                    <li><a href="offers.html">Ofertas</a></li>
+                    <li><a href="clientes.html">Clientes</a></li>
+                    <!-- Agrega más elementos de lista según sea necesario -->
+                </ul>
+            </nav>
+        </aside>
+        <div id="main-content">
+            <div id="tmain">
+                <h3>Carousel</h3>
+            </div>
+            <section >
+            <div class="row ">
+                <!-- Contenido 1 va aquí -->
+                <div class="col col-3">
+                    <article class="article card">
+                        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+                        <button class="action_buttons" id="myBtn">Click me</button>
+                    </article>
+                </div>
+               
+            </div>
+        </div>
+
+        <!-- Resto del contenido de container va aquí -->
+    </div>
+    <style>
+     
+
+        #myDropzone, #row, #submitBtn {
+        margin: 10px;
+        }
+
+        #description {
+        width: 100%;
+        }
+    </style>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Contenido del modal</p>
+              
+        </div>
+        </div>
+    <footer>
+        <!-- Contenido del footer -->
+        &copy; 2027 Facciata reinventos
+
+    </footer>
+    <script type="text/javascript">
+        document.querySelector('#tab').addEventListener('click', function() {
+        document.querySelector('aside').classList.toggle('hidden');
+    });
+    </script>
+
+    <script>
+        window.onload = function() {
+        var aside = document.querySelector('#container aside');
+        var container = document.querySelector('#container');
+
+        var asideHeight = aside.offsetHeight;
+        container.style.maxHeight = asideHeight + 'px';
+    }
+    </script>
+
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        var btn = document.getElementById("myBtn");
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+    </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.js"></script>
+
+
+    <script>
+        Dropzone.options.myDropzone = {
+            acceptedFiles: 'image/*',
+            dictDefaultMessage: 'Arrastra y suelta tus imágenes aquí',
+            // Aquí puedes agregar más opciones y eventos si lo necesitas
+        };
+    </script>
+</body>
+</html>
