@@ -43,7 +43,7 @@
                 <h2>Herramientas</h2>
                 <ul>
                     <li><a href="index.html">InfoWeb</a></li>
-                    <li><a href="sliders.html">Pantalla</a></li>
+                    <li><a href="#">Pantalla</a></li>
                     <li><a href="add_product.html">Productos</a></li>
                     <li><a href="carousel.html">Carrucel</a></li>
                     <li><a href="#">Muestras</a></li>
@@ -60,12 +60,12 @@
             <section >
             <div class="row ">
                 <!-- Contenido 1 va aquí -->
-                <div class="col col-12">
+                <div class="col col-3">
                     <h3 id="tcontent">Lista de pedidos</h3>
-                    <table>
+                    <table width="60%">
                         <thead>
                             <tr>
-                                <th>ID Cliente</th>
+                                <th>ID </th>
                                 <th>Nombre</th>
                                 <th>Apellidos</th>
                                 <th>Email</th>
@@ -77,10 +77,10 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
-                                <td>John</td>
-                                <td>Doe</td>
-                                <td>john.doe@example.com</td>
+                                <td wdth="10%">1</td>
+                                <td width="5%">John</td>
+                                <td wdth="10%">Doe</td>
+                                <td width="5%">john.doe@example.com</td>
                                 <td>1234567890</td>
                                 <td>0987654321</td>
                                 <td>5</td>
@@ -90,80 +90,15 @@
                         </tbody>
                     </table>
                 </div>
-                <span id="print_client" onclick="printOrder()">
-                    <i class="fas fa-print"></i>
-                </span>
             </div>
-            <button class="action_buttons" id="new_client">Nuevo</button>
         </div>
 
         <!-- Resto del contenido de container va aquí -->
-      
     </div>
     <div id="myModal" class="modal modal-md">
-        <div class="modal-client">
+        <div class="modal-content">
             <span class="close">&times;</span>
             <p>Contenido del modal</p>
-            <span id="print_client" onclick="printOrder()">
-                <i class="fas fa-print"></i>
-            </span>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID Cliente</th>
-                        <th>Nombre</th>
-                        <th>Apellidos</th>
-                        <th>Email</th>
-                        <th>Teléfono</th>
-                        <th>Celular</th>
-                        <th>Pedidos</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>john.doe@example.com</td>
-                        <td>1234567890</td>
-                        <td>0987654321</td>
-                        <td>5</td>
-                        <td><a href="#" id="myBtn">Ver pedido</a></td>
-                    </tr>
-                    <!-- Aquí irán las filas de la tabla con los datos de los clientes -->
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <div id="myClientInsertModal" class="modal modal-md">
-        <div class="modal-client">
-            <span class="close">&times;</span>
-            <h2>Pedido Cliente</h2>
-            <form>
-                <label for="productName">Nombre del producto:</label><br>
-                <input type="text" id="productName" name="productName"><br>
-                <label for="productQuantity">Cantidad del producto:</label><br>
-                <input type="number" id="productQuantity" name="productQuantity"><br>
-                <label for="deliveryLocation">Lugar de la entrega:</label><br>
-                <input type="text" id="deliveryLocation" name="deliveryLocation"><br>
-                <label for="deliveryDate">Fecha de entrega:</label><br>
-                <input type="date" id="deliveryDate" name="deliveryDate"><br>
-                <label for="firstName">Nombre:</label><br>
-                <input type="text" id="firstName" name="firstName"><br>
-                <label for="lastName">Apellido:</label><br>
-                <input type="text" id="lastName" name="lastName"><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br>
-                <label for="cellPhone">Celular:</label><br>
-                <input type="tel" id="cellPhone" name="cellPhone"><br>
-                <label for="phone">Telefono:</label><br>
-                <input type="tel" id="phone" name="phone"><br>
-                <input type="submit" value="Registrar Pedido">
-                <input type="reset" value="Cancelar">
-            </form>
-            
         </div>
     </div>
     <footer>
@@ -190,13 +125,16 @@
 
     <script>
         var modal = document.getElementById("myModal");
-
-        // Obtén el elemento que cierra el modal
         var span = document.getElementsByClassName("close")[0];
 
-        // Cuando el usuario hace clic en el elemento (x), cierra el modal
         span.onclick = function() {
             modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
         }
 
         var btn = document.getElementById("myBtn");
@@ -204,37 +142,6 @@
         btn.onclick = function() {
             modal.style.display = "block";
         }
-    </script>
-
-
-
-    <script>
-        var modalInsert = document.getElementById("myClientInsertModal");
-        var spanCloseModalClientInsert = document.getElementsByClassName("close")[0];
-
-        spanCloseModalClientInsert.onclick = function() {
-            modalInsert.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modalInsert) {
-                modalInsert.style.display = "none";
-            }
-        }
-
-        var btnClient = document.getElementById("new_client");
-
-        btnClient.onclick = function() {
-            modalInsert.style.display = "block";
-        }
-    </script>
-
-    <script>
-        function printOrder() {
-            window.print();
-        }
-
-        document.getElementById('printButton').addEventListener('click', printOrder);
     </script>
 </body>
 </html>
