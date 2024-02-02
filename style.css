@@ -205,9 +205,15 @@ background-color: #cccccc;
   justify-content: center;
   flex-direction: column;
 }
+.d-inline_block {
+  display:inline-block;
+}
+.mt-3 {
+  margin-top: 32px;
+}
+
 .action_buttons {
   background-color: #a1adba;
-  color: white;
   padding: 7px;
 }
 #new_client {
@@ -221,9 +227,6 @@ background-color: #cccccc;
   color: #a1adba;
   bottom: 50px;
 }
-
-
-
 
 
 /* Estilos para pantallas de tamaño grande */

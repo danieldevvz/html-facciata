@@ -60,19 +60,19 @@
             </div>
             
               <!-- Contenido 1 va aquí -->
-              <div class="col col-12">
+              <div class="col col-12 mt-3">
                 <form id="fform" method="post" enctype="multipart/form-data">
-                    <div class="form-group">
+                    <div class="">
                         <label for="stock">Hasta agotar stock</label>
                         <input type="radio" id="stock" name="offerType">
                     </div>
-                    <div class="form-group">
+                    <div class="">
                         <label for="days">Por días</label>
                         <input type="radio" id="dateInput" name="offerType">
                     </div>
-                    <div class="form-group">
+                    <div class="">
                         <label for="dates">Por fechas</label>
-                        <input type="radio" id="dateInput" name="offerType">
+                        <input type="radio" id="dateInputRanges" name="offerType">
                     </div>
                     <div class="form-group">
                         <label for="name1">Descripción de la oferta *</label>
@@ -101,21 +101,35 @@
                     <div class="form-group">
                         
                     </div>
+                 
                     <div class="form-group">
-                        Fechas
-                        <label for="file">fecha inicio</label>
-                        <input type="date" id="date" name="date">
+                        <div class="form-group" id="rangeDate">
+                            Fechas
+                            <div id="DateTostar">   
+                                <label for="file">fecha inicio</label>
+                                <input type="date" id="date" name="date">
+                            </div>
+                            
+                            <div id="DateToend">   
+                                <label for="file">fecha fin</label><br>
+                                <input type="date" id="date" name="date">
+                            </div>
+    
+                           
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div id="QuanDate">   
+                       
+                            <label for="file"> Cantidad de dias</label>
+                            <input type="number" id="date" name="date">
+                        </div>
                     </div>
                     <div class="form-group">
                         
                     </div>
                     <div class="form-group">
                         
-                    </div>
-                    <div class="form-group">
-                        Fechas
-                        <label for="file">fecha fin</label>
-                        <input type="date" id="date" name="date">
                     </div>
 
                     <div class="form-group">
@@ -124,7 +138,6 @@
                     </div>
                     <!-- Repite este bloque para cada fila -->
                 </form>
-               
             </div>
             <section >
         </div>
@@ -182,9 +195,37 @@
 
     <script>    
        window.onload = function() { 
-            alert("Scripts en curso.. date ranges y select radios")
-       }
+         //   alert("Scripts en curso.. date ranges y select radios")
+            document.getElementById('rangeDate').style.display = 'none';
+            document.getElementById('QuanDate').style.display = 'none';
+      
+        }
 
+
+       // Obtén los elementos
+        var stockRadio = document.getElementById('stock');
+        var dateInputRangesRadio = document.getElementById('dateInputRanges');
+        var dateInputRadio = document.getElementById('dateInput');
+        var rangeDateDiv = document.getElementById('rangeDate');
+        var quanDateDiv = document.getElementById('QuanDate');
+
+        // Cuando se hace clic en el radio 'stock', oculta 'rangeDate' y 'QuanDate'
+        stockRadio.addEventListener('click', function() {
+            rangeDateDiv.style.display = 'none';
+            quanDateDiv.style.display = 'none';
+        });
+
+        // Cuando se hace clic en el radio 'dateInputRanges', muestra 'rangeDate' y oculta 'QuanDate'
+        dateInputRangesRadio.addEventListener('click', function() {
+            rangeDateDiv.style.display = 'block';
+            quanDateDiv.style.display = 'none';
+        });
+
+        // Cuando se hace clic en el radio 'dateInput', oculta 'rangeDate' y 'QuanDate'
+        dateInputRadio.addEventListener('click', function() {
+            rangeDateDiv.style.display = 'none';
+            quanDateDiv.style.display = 'block';
+        });
     </script>
 </body>
 </html>
