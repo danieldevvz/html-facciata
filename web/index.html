@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Mi sitio web</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+   
+  </head>
+  <body>
+    <header>
+      <img id="logo" src="logo.png" alt="Logo" />
+      <!-- Replace 'logo.png' with the path to your logo -->
+
+      <nav>
+        <button class="hamburger">&#9776;</button>
+        <ul class="menu">
+          <li><a href="#">Quienes somos</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Muestras</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="pedidos.html">Pedidos</a></li>
+          <li><a href="#">Ofertas</a></li>
+          <!-- Agrega más enlaces según sea necesario -->
+        </ul>
+      </nav>
+      <div id="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </div>
+    </header>
+    <!-- Breadcrumb -->
+
+    <main>
+      <!-- Slider -->
+      <div id="slider">
+        <img
+          src="https://via.placeholder.com/500x300?text=Imagen+1"
+          alt="Imagen 1"
+        />
+        <img
+          src="https://via.placeholder.com/500x300?text=Imagen+2"
+          alt="Imagen 2"
+        />
+        <button id="slider-prev">Anterior</button>
+        <button id="slider-next">Siguiente</button>
+      </div>
+
+      <div class="bar-help-nav">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+          </ol>
+        </nav>
+
+        <!-- Filtro -->
+        <div class="filter">
+          <i class="fas fa-filter"></i>
+        </div>
+      </div>
+
+      <!-- Aquí iría tu slider -->
+
+      <!-- Aquí iría tu slider -->
+
+      <div class="product-list">
+        <!-- Producto -->
+        <div class="product-item">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Descripción de la imagen"
+          />
+          <p class="product-description">Descripción del producto</p>
+        </div>
+
+        <!-- Ventana modal -->
+        <div id="modal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImage" />
+          <div id="modalDescription"></div>
+        </div>
+        <div class="product-item">
+          <img src="https://via.placeholder.com/150" alt="Product 1" />
+          <h2>Producto 1</h2>
+          <div class="product-description">Descripción del producto 1</div>
+        </div>
+        <div class="product-item">
+          <img src="https://via.placeholder.com/150" alt="Product 2" />
+          <h2>Producto 2</h2>
+          <p>Descripción del producto 2</p>
+        </div>
+        <div class="product-item">
+          <img src="https://via.placeholder.com/150" alt="Product 3" />
+          <h2>Producto 3</h2>
+          <p>Descripción del producto 3</p>
+        </div>
+        <div class="product-item">
+          <img src="https://via.placeholder.com/150" alt="Product 4" />
+          <h2>Producto 4</h2>
+          <p>Descripción del producto 4</p>
+        </div>
+        <div class="product-item">
+          <img src="https://via.placeholder.com/150" alt="Product 5" />
+          <h2>Producto 5</h2>
+          <p>Descripción del producto 5</p>
+        </div>
+        <div class="product-item">
+          <img src="https://via.placeholder.com/150" alt="Product 6" />
+          <h2>Producto 6</h2>
+          <p>Descripción del producto 6</p>
+        </div>
+
+        <div class="products">
+          <!-- Tus productos van aquí -->
+        </div>
+
+        
+      </div>
+<!-- Paginación -->
+<div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#">1</a>
+    <a href="#" class="active">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">&raquo;</a>
+  </div>
+      <!-- Carousel -->
+      <div id="carousel">
+        <img
+          src="https://via.placeholder.com/500x300?text=Imagen+1"
+          alt="Imagen 1"
+        />
+        <img
+          src="https://via.placeholder.com/500x300?text=Imagen+2"
+          alt="Imagen 2"
+        />
+        <button id="carousel-prev">Anterior</button>
+        <button id="carousel-next">Siguiente</button>
+      </div>
+    </main>
+
+    <!-- Aquí iría el resto de tu página -->
+
+    <footer>
+      <p>&copy; 2024 Facciata revestimiento. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+      // Select all images and the first image
+      var images = document.querySelectorAll("#slider img");
+      var currentImage = 0;
+
+      // Function to change image
+      function changeImage() {
+        images[currentImage].style.display = "none"; // Hide current image
+        currentImage = (currentImage + 1) % images.length; // Move to the next image
+        images[currentImage].style.display = "block"; // Show next image
+      }
+
+      // Set interval to change image every 3 seconds
+      setInterval(changeImage, 3000);
+
+      document
+        .querySelector(".hamburger")
+        .addEventListener("click", function () {
+          document.querySelector(".menu").classList.toggle("show");
+        });
+
+      // Selecciona todas las imágenes de los productos
+      var productImages = document.querySelectorAll(".product-item img");
+
+      // Obtiene los elementos del modal
+      var modal = document.getElementById("modal");
+      var modalImg = document.getElementById("modalImage");
+      var modalDescription = document.getElementById("modalDescription");
+
+      // Agrega un evento de clic a cada producto
+      var products = document.querySelectorAll(".product-item");
+      products.forEach(function (product) {
+        product.addEventListener("click", function () {
+          // Obtiene la imagen y la descripción del producto
+          var img = product.querySelector("img");
+          var description = product.querySelector(".product-description");
+
+          // Muestra el modal con la imagen y la descripción del producto
+          modal.style.display = "block";
+          modalImg.src = img.src;
+          modalDescription.textContent = description.textContent;
+        });
+      });
+
+      // Agrega un evento de clic al botón de cerrar
+      document.querySelector(".close").addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

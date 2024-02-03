@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Mi sitio web</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+   
+  </head>
+  <body>
+
+    <style>
+     
+    </style>
+    <header>
+      <img id="logo" src="logo.png" alt="Logo" />
+      <!-- Replace 'logo.png' with the path to your logo -->
+
+      <nav>
+        <button class="hamburger">&#9776;</button>
+        <ul class="menu">
+          <li><a href="#">Quienes somos</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Muestras</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="pedidos.html">Pedidos</a></li>
+          <li><a href="#">Ofertas</a></li>
+          <!-- Agrega más enlaces según sea necesario -->
+        </ul>
+      </nav>
+      <div id="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </div>
+    </header>
+    <!-- Breadcrumb -->
+
+    <main>
+    
+
+      <div class="bar-help-nav">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+          </ol>
+        </nav>
+
+        <!-- Filtro -->
+        <div class="filter">
+          <i class="fas fa-filter"></i>
+        </div>
+      </div>
+
+      <!-- Aquí iría tu slider -->
+
+      <!-- Aquí iría tu slider -->
+
+     
+      <div class="order-form">
+        <!-- Formulario de pedido -->
+        <form>
+          <input type="text" name="product-name" placeholder="Nombre del producto">
+          <input type="number" name="product-quantity" placeholder="Cantidad de producto">
+          <input type="text" name="delivery-place" placeholder="Lugar de entrega">
+          <input type="date" name="delivery-date" placeholder="Fecha de entrega">
+          <input type="text" name="name" placeholder="Nombre">
+          <input type="text" name="surname" placeholder="Apellido">
+          <input type="email" name="email" placeholder="Email">
+          <input type="tel" name="cellphone" placeholder="Celular">
+          <input type="tel" name="phone" placeholder="Teléfono">
+          <div class="button-container">
+            <button type="reset">Cancelar</button>
+            <button type="submit">Enviar pedido</button>
+          </div>
+        </form>
+      
+        <!-- Información de contacto -->
+        <div class="contact-info">
+          <!-- Logo -->
+          <img src="logo.png" alt="Logo de la empresa">
+          <p>Dirección de la empresa</p>
+          <p>Número de teléfono</p>
+      
+          <!-- Mapa de Google -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345096036!2d144.95373531550472!3d-37.817209979751584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6eab!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2s!4v1631233126325!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </main>
+
+    <!-- Aquí iría el resto de tu página -->
+
+    <footer>
+      <p>&copy; 2024 Facciata revestimiento. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+      // Select all images and the first image
+      var images = document.querySelectorAll("#slider img");
+      var currentImage = 0;
+
+      // Function to change image
+      function changeImage() {
+        images[currentImage].style.display = "none"; // Hide current image
+        currentImage = (currentImage + 1) % images.length; // Move to the next image
+        images[currentImage].style.display = "block"; // Show next image
+      }
+
+      // Set interval to change image every 3 seconds
+      setInterval(changeImage, 3000);
+
+      document
+        .querySelector(".hamburger")
+        .addEventListener("click", function () {
+          document.querySelector(".menu").classList.toggle("show");
+        });
+
+      // Selecciona todas las imágenes de los productos
+      var productImages = document.querySelectorAll(".product-item img");
+
+      // Obtiene los elementos del modal
+      var modal = document.getElementById("modal");
+      var modalImg = document.getElementById("modalImage");
+      var modalDescription = document.getElementById("modalDescription");
+
+      // Agrega un evento de clic a cada producto
+      var products = document.querySelectorAll(".product-item");
+      products.forEach(function (product) {
+        product.addEventListener("click", function () {
+          // Obtiene la imagen y la descripción del producto
+          var img = product.querySelector("img");
+          var description = product.querySelector(".product-description");
+
+          // Muestra el modal con la imagen y la descripción del producto
+          modal.style.display = "block";
+          modalImg.src = img.src;
+          modalDescription.textContent = description.textContent;
+        });
+      });
+
+      // Agrega un evento de clic al botón de cerrar
+      document.querySelector(".close").addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
